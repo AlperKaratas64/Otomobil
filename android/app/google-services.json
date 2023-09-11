@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "287810725765",
+    "project_id": "otomobil2",
+    "storage_bucket": "otomobil2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287810725765:android:65705427a877511fd446ec",
+        "android_client_info": {
+          "package_name": "com.example.otomobil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoMJ0fIWAoVhH9zw3ZIFRcU8KX9zN-Rh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
