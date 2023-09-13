@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+//import 'package:otomobil/secim/il_ilce_secimi.dart';
 import 'package:otomobil/views/passwordchange/password_change.dart';
 import 'package:otomobil/views/register/register_page.dart';
 import 'firebase_options.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         "/RegisterPage": (context) => RegisterPage(),
         "/homePage": (context) => HomePage(),
         "/passwordchangePage": (context) => PasswordchangePage(),
+        //"/ilce": (context) => IlIlceSecimi(),
       },
       theme: ThemeData(),
       home: const LoginPage(),

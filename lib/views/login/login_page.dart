@@ -56,18 +56,14 @@ class _LoginPageState extends State<LoginPage> {
               _buildImages(),
               _buildMaxSpace(),
               _buildUserNameText(),
-              //_buildUsernameTextField(),
               emailTextField(),
               _buildSpace(),
               _buildPasswordText(),
-              //_buildPasswordTextField(),
               passwordTextField(),
               _buildSpace(),
               _buildPasswordverifyText(),
               _buildSpace(),
-              //_buildButton(),
               signUpButton(),
-              //signUpButton(),
               _buildSpace(),
               _buildRegisterText(),
             ],
@@ -139,7 +135,7 @@ class _LoginPageState extends State<LoginPage> {
             try {
               final userResult = await firebaseAuth.signInWithEmailAndPassword(
                   email: email, password: password);
-              //formKey.currentState!.reset();
+              formKey.currentState!.reset();
               Navigator.pushReplacementNamed(context, "/homePage");
               print(userResult.user!.email);
             } catch (e) {

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkiye il ve ilçeler json</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+  <div class="container mb-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center pt-5">Türkiye il ve ilçe JSON Data</h1><br />
+          <div class="button-filter">
+            <a href="#">Akdeniz</a>
+            <a href="#">Doğu Anadolu</a>
+            <a href="#">Ege</a>
+            <a href="#">Güneydoğu Anadolu</a>
+            <a href="#">Karadeniz</a>
+            <a href="#">Marmara</a>
+            <a href="#">İç Anadolu</a>
+            <button type="button" name="button" class="all">Temizle</button>
+          </div>
+          <table id="data-table" class="table table-bordered  table-responsive">
+               <thead>
+                    <tr>
+                      <th>İl</th>
+                      <th>Plaka Kodu</th>
+                      <th>Alan Kodu</th>
+                      <th>Nüfus</th>
+                      <th>Bölge</th>
+                      <th>Yüzölçümü</th>
+                      <th>Erkek Nüfus</th>
+                      <th>Kadın Nüfus</th>
+                      <th>Nüfus Yüzdesi</th>
+                      <th>İlçe Sayısı</th>
+                    </tr>
+               </thead>
+          </table>
+        </div>
+      </div>
+  </div>
+
+  <div class="city-details">
+    <div class="city-details-close">
+        <img src="close.png" alt="">
+    </div>
+    <h3 class="text-center pt-5" id="il_adi"></h3><br />
+    <div id="sehirDetay">
+          <p>
+            <span>Plaka Kodu : <strong id="plaka_kodu"></strong></span>
+            <span>Alan Kodu : <strong id="alan_kodu"></strong></span>
+            <span>Bölge : <strong id="bolge"></strong></span>
+          </p>
+          <p>
+            <span>Nüfus : <strong id="nufus"></strong></span>
+            <span>Yüzölçümü : <strong id="yuzolcumu"></strong></span>
+            <span>Nüfus Payı : <strong id="nufus_yuzdesi_genel"></strong></span>
+          </p>
+          <p>
+            <span>Erkek Nüfüsu : <strong id="erkek_nufus"></strong></span>
+            <span>Erkek Nüfusu Yüzdesi : <strong id="erkek_nufus_yuzde"></strong></span>
+          </p>
+          <p>
+            <span>Kadın Nüfüsu : <strong id="kadin_nufus"></strong></span>
+            <span>Kadın Nüfusu Yüzdesi : <strong id="kadin_nufus_yuzde"></strong></span>
+          </p>
+          <p>
+            <span>Kısa Bilgi : <strong id="kisa_bilgi"></strong></span>
+          </p>
+          <p>İlçeler : <strong id="ilceler"></strong> </p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"> </script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"> </script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"> </script>
+  <script src="js/index.js"></script>
+  <script src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/turkish-string.js"></script>
+  </body>
+</html>

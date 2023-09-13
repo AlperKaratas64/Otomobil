@@ -1,9 +1,16 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:otomobil/data/src/colors.dart';
 import 'package:otomobil/data/src/images.dart';
 import 'package:otomobil/data/src/strings.dart';
+//import 'package:otomobil/secim/il_ilce_secimi.dart';
+import 'package:otomobil/secim/il_model.dart';
+import 'package:otomobil/secim/il_secme_sayfasi.dart';
+import 'package:otomobil/secim/ilce_secme_sayfasi.dart';
 import 'package:otomobil/views/login/login_page.dart';
 import 'package:otomobil/views/profile/profile_page.dart';
 
@@ -42,9 +49,14 @@ class _HomePageState extends State<HomePage> {
   Widget _buildBody() {
     return ListView.builder(
       itemBuilder: (_, index) => Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: _buildCard(index),
-      ),
+          padding: const EdgeInsets.all(5.0),
+          child: Form(
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              _buildCard(index),
+            ],
+          ))),
       itemCount: 5,
     );
   }
