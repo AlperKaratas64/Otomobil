@@ -8,6 +8,8 @@ import 'package:otomobil/data/src/strings.dart';
 import '../../data/src/colors.dart';
 
 class RegisterPage extends StatefulWidget {
+  static const String routeName = '/views/register/register_page.dart';
+
   const RegisterPage({super.key});
 
   @override

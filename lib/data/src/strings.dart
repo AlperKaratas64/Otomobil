@@ -12,5 +12,10 @@ const String Gmailbutton = "Mail Gönder";
 const String homeAppBarText = 'Anasayfa';
 
 const String profiletext = 'Profil';
-const String infoText = 'Hakkında';
+const String infoText = 'Hakkımızda';
 const String logoutText = 'Çıkış Yap';
+const String AccountText = 'Hesap';
+
+const String Ilsecim = 'İl Seçiniz';
+const String Ilcesecim = 'İlçe Seçiniz';
+const String Ililcesecimtext = 'İl ve İlçe Seçimi';
