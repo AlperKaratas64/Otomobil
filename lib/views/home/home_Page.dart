@@ -6,6 +6,8 @@ import 'package:get/get.dart';
 import 'package:otomobil/data/src/colors.dart';
 import 'package:otomobil/data/src/images.dart';
 import 'package:otomobil/data/src/strings.dart';
+import 'package:otomobil/views/account/account_page.dart';
+import 'package:otomobil/views/info/info_page.dart';
 import 'package:otomobil/views/secim/il_model.dart';
 import 'package:otomobil/views/secim/il_secme_sayfasi.dart';
 import 'package:otomobil/views/secim/ilce_secme_sayfasi.dart';
@@ -324,7 +326,7 @@ class _HomePage extends State<HomePage> {
   void _goToAccount() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => LoginPage(),
+        builder: (context) => accountPage(),
       ),
     );
   }
@@ -332,10 +334,8 @@ class _HomePage extends State<HomePage> {
   void _goToInfo() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => LoginPage(),
+        builder: (context) => InfoPage(),
       ),
     );
   }
-
-  //veri gösterme fonksiyonu
 }
