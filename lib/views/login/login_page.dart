@@ -265,7 +265,7 @@ class _LoginPageState extends State<LoginPage> {
             text: registerButtonText,
             style: const TextStyle(color: black, fontStyle: FontStyle.italic),
             recognizer: TapGestureRecognizer()
-              ..onTap = () => Navigator.pushNamed(context, "/homePage")),
+              ..onTap = () => Navigator.pushNamed(context, "/RegisterPage")),
       ]),
     );
   }

@@ -20,6 +20,9 @@ class _RegisterPage extends State<RegisterPage> {
   late String email, password;
   final formKey = GlobalKey<FormState>();
   final firebaseAuth = FirebaseAuth.instance;
+  bool? _isCustomerChecked = false;
+  bool? _isSellerChecked = false;
+  String? selectedOption;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +62,7 @@ class _RegisterPage extends State<RegisterPage> {
               _buildPasswordText(),
               passwordTextField(),
               _buildMaxSpace(),
-              //_buildButton(),
+              _CheckboxGroup(),
               signUpButton(),
             ],
           ),
@@ -163,9 +166,48 @@ class _RegisterPage extends State<RegisterPage> {
             }
           } else {}
         },
-        child: const Text(LoginButton),
-        style: ElevatedButton.styleFrom(),
+        child: const Text(registerButtonText),
+        style: ElevatedButton.styleFrom(
+            primary: black,
+            foregroundColor: white,
+            elevation: 3,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+            padding: EdgeInsets.all(30)),
       ),
+    );
+  }
+
+  Column _CheckboxGroup() {
+    return Column(
+      children: [
+        RadioListTile<String>(
+          title: Text('Müşteri'),
+          value: 'Müşteri',
+          groupValue: selectedOption,
+          onChanged: (value) {
+            setState(() {
+              selectedOption = value;
+              print("Seçilen rol: $selectedOption");
+            });
+          },
+          controlAffinity: ListTileControlAffinity.leading,
+        ),
+        RadioListTile<String>(
+          title: Text('Satıcı'),
+          value: 'Satıcı',
+          groupValue: selectedOption,
+          onChanged: (value) {
+            setState(() {
+              selectedOption = value;
+              print("Seçilen rol: $selectedOption");
+            });
+          },
+          controlAffinity: ListTileControlAffinity.leading,
+        ),
+        SizedBox(height: 20),
+      ],
     );
   }
 }

@@ -152,7 +152,6 @@ class _HomePage extends State<HomePage> {
             _buildSpace(),
             _buildCountyNameText(),
             _buildCountyText(),
-            _buildDropDownButton(),
           ],
         ),
       ),
@@ -162,28 +161,6 @@ class _HomePage extends State<HomePage> {
   Widget _buildSpace() {
     return const SizedBox(
       height: 20,
-    );
-  }
-
-  Widget _buildDropDownButton() {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Column(
-            children: [
-              Text(
-                "Seçilen İl : $_secilenIl",
-                style: TextStyle(fontSize: 26),
-              ),
-              Text(
-                "Seçilen İlçe : $_secilenIlce",
-                style: TextStyle(fontSize: 26),
-              ),
-            ],
-          )
-        ],
-      ),
     );
   }
 
